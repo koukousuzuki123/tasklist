@@ -4,7 +4,7 @@
     <c:param name="content">
         <h2>id : ${task.id} のタスク編集ページ</h2>
 
-        <form method="POST" action="${page.Context.request.contextPath}/update">
+        <form method="POST" action="${pageContext.request.contextPath}/update">
             <c:import url="_form.jsp" />
         </form>
 
@@ -15,11 +15,10 @@
         </form>
         <script>
         function confirmDestroy(){
-            if(confirm("本当に削除してよろしいですか？")){
+            if(confirm("本当に削除してよろしいですか？")) {
                 document.forms[1].submit();
             }
         }
         </script>
-
     </c:param>
 </c:import>
